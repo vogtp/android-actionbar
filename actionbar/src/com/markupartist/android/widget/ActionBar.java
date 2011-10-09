@@ -18,8 +18,6 @@ package com.markupartist.android.widget;
 
 import java.util.LinkedList;
 
-import com.markupartist.android.widget.actionbar.R;
-
 import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
@@ -36,18 +34,20 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.markupartist.android.widget.actionbar.R;
+
 public class ActionBar extends RelativeLayout implements OnClickListener {
 
-    private LayoutInflater mInflater;
-    private RelativeLayout mBarView;
-    private ImageView mLogoView;
-    private View mBackIndicator;
+    private final LayoutInflater mInflater;
+    private final RelativeLayout mBarView;
+    private final ImageView mLogoView;
+    private final View mBackIndicator;
     //private View mHomeView;
-    private TextView mTitleView;
-    private LinearLayout mActionsView;
-    private ImageButton mHomeBtn;
-    private RelativeLayout mHomeLayout;
-    private ProgressBar mProgress;
+    private final TextView mTitleView;
+    private final LinearLayout mActionsView;
+    private final ImageButton mHomeBtn;
+    private final RelativeLayout mHomeLayout;
+    private final ProgressBar mProgress;
 
     public ActionBar(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -77,10 +77,10 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
     }
 
     public void setHomeAction(Action action) {
-        mHomeBtn.setOnClickListener(this);
-        mHomeBtn.setTag(action);
-        mHomeBtn.setImageResource(action.getDrawable());
-        mHomeLayout.setVisibility(View.VISIBLE);
+		mHomeBtn.setOnClickListener(this);
+		mHomeBtn.setTag(action);
+		mHomeBtn.setImageResource(action.getDrawable());
+		mHomeLayout.setVisibility(View.VISIBLE);
     }
 
     public void clearHomeAction() {
@@ -271,8 +271,8 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
     }
 
     public static class IntentAction extends AbstractAction {
-        private Context mContext;
-        private Intent mIntent;
+        private final Context mContext;
+        private final Intent mIntent;
 
         public IntentAction(Context context, Intent intent, int drawable) {
             super(drawable);
