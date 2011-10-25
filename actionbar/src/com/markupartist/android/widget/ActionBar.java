@@ -62,7 +62,7 @@ public class ActionBar extends RelativeLayout implements OnClickListener {
         mHomeBtn = (ImageButton) mBarView.findViewById(R.id.actionbar_home_btn);
         mBackIndicator = mBarView.findViewById(R.id.actionbar_home_is_back);
 
-        mTitleView = (TextView) mBarView.findViewById(R.id.actionbar_title);
+		mTitleView = (TextView) mBarView.findViewById(R.id.actionbar_title);
         mActionsView = (LinearLayout) mBarView.findViewById(R.id.actionbar_actions);
         
         mProgress = (ProgressBar) mBarView.findViewById(R.id.actionbar_progress);
